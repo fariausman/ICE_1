@@ -22,35 +22,30 @@ public class CardTrick {
             Card card = new Card();
             int j= (int) (Math.random()* 13 ) + 1;
 
-            //card.setValue(insert call to random number generator here)
+    //card.setValue(insert call to random number generator here)
 
             card.setValue(j);
-            //card.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            // Hint: You can use Random -> random.nextInt(n) to get a random number between 0 and n-1 (inclusive)
-            //       Don't worry about duplicates at this point
+    //card.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             int n=(int) (Math.random() * 4 ) + 0  ;
-            card.setSuit(Card.SUITS[n]);    
-            // 
+            card.setSuit(Card.SUITS[n]); 
                    // hand[0]=card;
 
             hand[i]=card;
         }
-         for(int i=0; i< hand.length; i++)
-        {
-                System.out.println(" suit:"+ hand[i].getSuit()+"\t value is:"+ hand[i].getValue());
-                
-        }
-                System.out.println("Please enter your guess");
-
-
+        //print deck of cards
+        
+//         for(int i=0; i< hand.length; i++)
+//        {
+//                System.out.println(" suit:"+ hand[i].getSuit()+"\t value is:"+ hand[i].getValue());
+//                
+//        }
         // insert code to ask the user for Card value and suit, create their card
-        // and search the hand here. 
+        System.out.println("Please enter your guess");
         // Hint: You can ask for values 1 to 10, and then
             System.out.println("Enter card number value 1-13 to search");
             int cardnum=input.nextInt();
-            System.out.println("Please select suit \n 1:Heart \n 2:Diamonds \n 3: Spades \n 4:Club");
+            System.out.println("Please select suit \n 1:Heart \n 2:Diamonds \n 3: Spades \n 4:Clubs");
             String suitsear=text.nextLine();
-           // for(String suit:Card.SUITS)
             for(int i=0; i<hand.length; )
             {
               if(hand[i].getSuit().equalsIgnoreCase(suitsear) && hand[i].getValue()==cardnum)
@@ -73,7 +68,7 @@ public class CardTrick {
     /**
      * A simple method to print out personal information. Follow the instructions to 
      * replace this information with your own.
-     * @author Paul Bonenfant Jan 2022
+     * @author faria usman feb 1,2023
      */
     private static void printInfo() {
     
